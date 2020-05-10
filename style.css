@@ -1,0 +1,159 @@
+*{
+	margin:0;
+}
+
+.clear{
+	clear: both;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+body
+{
+	background-color:white;
+	color:black;
+
+	font-family:"EB Garamond",serif;
+	font-size:24px;
+
+	line-height:1.6em; 
+}
+
+h1
+{
+	color:white;
+	text-align:center;
+	margin:auto;
+	padding-top:20px;
+	padding-bottom:20px;
+	font-weight: bold;
+}
+
+.title
+{
+	margin:0;
+	padding:0;
+	
+	font-family:"PT Serif",serif;
+	font-size:40px;
+	line-height:1.6em;
+	text-align:center;
+	
+	background-color:green;
+	color:rgb(255, 255, 255);
+}
+
+.intro
+{
+	background-image: url(img/showcase.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	max-height: 100%;
+	color:rgb(255, 255, 255);
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+}
+
+.navbar ul
+{
+	text-align:right;
+	list-style:none;
+	background-color: black;
+	padding:0;
+}
+
+.navbar li
+{
+	display:inline;	
+}
+
+.navbar a
+{
+	color:white;
+	padding-right:15px;
+}
+
+.navbar a:hover
+{
+	color:rgb(11, 253, 11);
+}
+
+.container
+{
+	width: 95%;
+	height:100%;
+	margin:auto;
+}
+
+.info
+{
+	height: 100%;
+	white-space: nowrap;
+}
+
+.info h1
+{
+	color: black;
+	text-align: center;
+	text-decoration: underline; 
+}
+
+.education
+{
+	vertical-align: top;
+	display: inline-block;
+	width:50%;
+	height: 100%;
+	white-space: normal;
+}
+
+.education ul
+{
+	color: black;
+	font-family:"PT Serif",serif;
+	font-size:20px;
+}
+
+/* .verticalLine
+{
+	vertical-align: bottom;
+	display: inline-block;
+	width:0%;
+	height: 300px;
+	border: 1px solid black;
+	white-space: normal;
+} */
+
+.work
+{
+	vertical-align: top;
+	display: inline-block;
+	width:50%;
+	height: 100%;
+	white-space: normal;
+}
+
+.work ul
+{
+	color: black;
+	font-family:"PT Serif",serif;
+	font-size:20px;
+}
+
+.musicPlayer
+{
+	float:right;
+	padding-right: 30px;
+}
+
+#volumeRange
+{
+	width:50%;
+}
+
