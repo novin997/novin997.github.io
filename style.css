@@ -150,10 +150,57 @@ h1
 {
 	float:right;
 	padding-right: 30px;
+	line-height: normal;
 }
 
-#volumeRange
+.volumeSlider
 {
-	width:50%;
+	font-size: 15px;
+	text-align: center;	
 }
 
+.volumeSlider h5
+{
+	font-size: 15px;
+	text-align: center;
+	text-shadow: 0 0 1px black;
+}
+
+.slider
+{
+	width:100%;
+}
+
+.slider::-moz-range-thumb:active
+{
+	background: black;
+	opacity: 2px;
+}
+
+.slider::-webkit-slider-thumb
+{
+	background:green;
+}
+
+.slider::-moz-range-thumb
+{
+	background:white;
+	transition: 1s;
+	border:1px solid black;
+}
+
+.slider::-moz-range-track
+{
+	border:1px solid black; 
+	background:white;
+	box-shadow: 2px 2px 1px black;
+}
+
+.scButton
+{
+	width: 32%;
+	background-image: linear-gradient(white,black);
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px black;
+	color: white;
+}
