@@ -265,18 +265,20 @@ h1
 @media screen and (max-width:1024px)
 {
 	.education{
-		width:40%;
+		width:48%;
+		margin:auto;
 	}
 
 	.work{
-		width:40%;
+		width:48%;
+		margin:auto;
 	}
 
 	.musicPlayer{
 		display:block;
 		width:50%;
 		float:none;
-		margin:0 auto;
+		margin:auto;
 	}
 }
 
