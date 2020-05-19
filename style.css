@@ -35,7 +35,7 @@ h1
 
 .title
 {
-	margin:0;
+	margin:auto;
 	padding:0;
 	
 	font-family:"PT Serif",serif;
@@ -248,6 +248,18 @@ h1
 	font-family: 'Pangolin', cursive;
 }
 
+.projects_mobile
+{
+	display: none;
+}
+
+.projects_mobile h1{
+	color: black;
+	text-align: center;
+	text-decoration: underline;
+	font-family: 'Pangolin', cursive;
+}
+
 #cardGameImage{
 	display: inline-grid;
 	margin: auto;
@@ -305,7 +317,7 @@ h1
 
 @media all and (max-width:700px)
 {
-	.projects
+	.projects_mobile
 	{
 		display:block;
 		margin:auto;
@@ -329,5 +341,20 @@ h1
 		width:75%;
 		margin:auto;
 		float:none;
+	}
+
+	.projects
+	{
+		display: none;
+	}
+
+	#cardGameImage
+	{
+		display:block;
+	}
+
+	#AES_Architecture
+	{
+		display:block;
 	}
 }
