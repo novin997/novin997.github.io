@@ -30,6 +30,7 @@ h1
 	padding-top:20px;
 	padding-bottom:20px;
 	font-weight: bold;
+	line-height: 1.2em;
 }
 
 .title
@@ -55,9 +56,8 @@ h1
 	max-width: 100%;
 	max-height: 100%;
 	color:rgb(255, 255, 255);
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-bottom: 2%;
+	padding: 0 50px 20px 50px;
+	text-align: justify;
 }
 
 .navbar ul
@@ -123,6 +123,7 @@ h1
 	color:black;
 	font-family:"EB Garamond",serif;
 	font-size:20px;
+	text-align: justify;
 }
 
 .education
@@ -208,17 +209,22 @@ h1
 	box-shadow: 2px 2px 1px black;
 }
 
+.buttons
+{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
 .scButton
 {
-	width: 30%;
-	display: inline-block;
+	width: 32%;
 	background-image: linear-gradient(white,black);
 	border: 1px solid black;
 	box-shadow: 1px 1px 1px black;
 	color: white;
 	overflow: hidden;
 	padding: 0;
-	margin-left: 2px;
 }
 
 .footer
@@ -231,6 +237,7 @@ h1
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
 	grid-auto-rows: auto;
+	padding-top:10px;
 }
 
 .project1
@@ -256,22 +263,39 @@ h1
 }
 
 #cardGameImage{
+	margin-top:10px;
 	display: inline-grid;
 	margin: auto;
 	width:60%;
 	border:black 1px solid;
 }
 
-@media screen and (max-width:1024px)
+.details
+{
+	display: inline-block;
+	line-height: 1.4em;
+	padding: 10px 0 20px 10%;
+}
+
+.details li
+{
+	color:black;
+	font-family:"EB Garamond",serif;
+	font-size:20px;
+}
+
+@media all and (max-width:1024px)
 {
 	.education{
-		width:48%;
+		width:45%;
 		margin:auto;
+		float:left;
 	}
 
 	.work{
-		width:48%;
+		width:45%;
 		margin:auto;
+		float:right;
 	}
 
 	.musicPlayer{
@@ -279,6 +303,35 @@ h1
 		width:50%;
 		float:none;
 		margin:auto;
+		padding:40px 0 20px 0;
 	}
 }
 
+@media all and (max-width:700px)
+{
+	.projects
+	{
+		display:block;
+		margin:auto;
+		width:75%;
+	}
+
+	.details
+	{
+		padding:10px 0 20px 0;
+	}
+
+	.education{
+		display:block;
+		width:75%;
+		margin:auto;
+		float:none;
+	}
+
+	.work{
+		display:block;
+		width:75%;
+		margin:auto;
+		float:none;
+	}
+}
