@@ -230,6 +230,7 @@ h1
 .footer
 {
 	background-color: green;
+	height: 100px;
 }
 
 .projects
@@ -253,6 +254,15 @@ h1
 	bottom: 10px;
 	top:10px;
 	width:60%;
+	border:black 1px solid;
+}
+
+#AES_Architecture{
+	display: inline-grid;
+	margin: auto;
+	bottom: 10px;
+	top:10px;
+	width:90%;
 	border:black 1px solid;
 }
 
