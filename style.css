@@ -343,12 +343,72 @@ h1
 		float:none;
 	}
 
-	.projects
+	/*.projects
 	{
 		display: none;
+	}*/
+
+	.projects
+	{
+		grid-template-columns:1fr;
+		grid-template-areas:"header1"
+							"cardGameImage"
+							"text1"
+							"header2"
+							"AES_Architecture"
+							"text2"
+							"header3"
+							"cardGameImage2"
+							"text3"
+	}
+
+	#header1
+	{
+		grid-area: header1;
+	}
+
+	#header2
+	{
+		grid-area: header2;
+	}
+
+	#header3
+	{
+		grid-area: header3;
 	}
 
 	#cardGameImage
+	{
+		grid-area: cardGameImage;
+	}
+
+	#cardGameImage2
+	{
+		grid-area: cardGameImage2;
+	}
+
+	#AES_Architecture
+	{
+		grid-area: AES_Architecture;
+	}
+
+	#text1
+	{
+		grid-area: text1;
+	}
+
+	#text2
+	{
+		grid-area: text2;
+	}
+
+	#text3
+	{
+		grid-area: text3;
+	}
+	
+
+	/*#cardGameImage
 	{
 		display:block;
 	}
@@ -356,5 +416,5 @@ h1
 	#AES_Architecture
 	{
 		display:block;
-	}
+	}*/
 }
