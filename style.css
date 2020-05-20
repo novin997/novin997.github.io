@@ -131,18 +131,7 @@ h1
 	vertical-align: top;
 	display: inline-block;
 	width:38%;
-	/* white-space: normal;*/
 }
-
-/* .verticalLine
-{
-	vertical-align: bottom;
-	display: inline-block;
-	width:0%;
-	height: 300px;
-	border: 1px solid black;
-	white-space: normal;
-} */
 
 .work
 {
@@ -150,20 +139,15 @@ h1
 	padding-right: 3%;
 	display: inline-block;
 	width:38%;
-	/*white-space: normal;*/
 }
 
 .musicPlayer
 {
-	/* float:right;
-	padding-right: 30px;
-	line-height: normal; */
 	padding-top:1%;
 	padding-left:1%;
 	vertical-align: top;
 	display: inline-block;
 	width:19%;
-	/*white-space: normal;*/
 }
 
 .volumeSlider
@@ -231,6 +215,7 @@ h1
 {
 	background-color: green;
 	height: 100px;
+
 }
 
 .projects
@@ -248,19 +233,16 @@ h1
 	font-family: 'Pangolin', cursive;
 }
 
-.projects_mobile
-{
-	display: none;
-}
-
-.projects_mobile h1{
-	color: black;
-	text-align: center;
-	text-decoration: underline;
-	font-family: 'Pangolin', cursive;
-}
-
 #cardGameImage{
+	display: inline-grid;
+	margin: auto;
+	bottom: 10px;
+	top:10px;
+	width:60%;
+	border:black 1px solid;
+}
+
+#cardGameImage2{
 	display: inline-grid;
 	margin: auto;
 	bottom: 10px;
@@ -317,18 +299,6 @@ h1
 
 @media all and (max-width:700px)
 {
-	.projects_mobile
-	{
-		display:block;
-		margin:auto;
-		width:75%;
-	}
-
-	.details
-	{
-		padding:10px 0 20px 0;
-	}
-
 	.education{
 		display:block;
 		width:75%;
@@ -342,11 +312,6 @@ h1
 		margin:auto;
 		float:none;
 	}
-
-	/*.projects
-	{
-		display: none;
-	}*/
 
 	.projects
 	{
@@ -390,6 +355,8 @@ h1
 	#AES_Architecture
 	{
 		grid-area: AES_Architecture;
+		width:70%;
+		margin:auto;
 	}
 
 	#text1
