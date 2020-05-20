@@ -213,9 +213,17 @@ h1
 
 .footer
 {
-	background-color: green;
-	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	background-color:dimgray;
+	height: 50px;
+}
 
+.footer > *
+{
+	padding:10px;
 }
 
 .projects
@@ -272,6 +280,16 @@ h1
 	color:black;
 	font-family:"EB Garamond",serif;
 	font-size:20px;
+}
+
+.fa
+{
+	color:white;	
+}
+
+.fa:hover
+{
+	color:green;	
 }
 
 @media all and (max-width:1024px)
@@ -373,15 +391,4 @@ h1
 	{
 		grid-area: text3;
 	}
-	
-
-	/*#cardGameImage
-	{
-		display:block;
-	}
-
-	#AES_Architecture
-	{
-		display:block;
-	}*/
 }
