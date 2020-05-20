@@ -56,7 +56,7 @@ h1
 	max-width: 100%;
 	max-height: 100%;
 	color:rgb(255, 255, 255);
-	padding: 0 50px 20px 50px;
+	padding: 30px 50px 30px 50px;
 	text-align: justify;
 }
 
@@ -71,6 +71,11 @@ h1
 .navbar li
 {
 	display:inline;	
+}
+
+.navbar #home
+{
+	color:darkorange;
 }
 
 .navbar a
@@ -122,7 +127,7 @@ h1
 {
 	color:black;
 	font-family:"EB Garamond",serif;
-	font-size:20px;
+	font-size:20px;Design such ARMv3 Basic Instruction Set. Minor interest in Security, Game Development and building websites. Hobbies include building my own Personal Computer, Keyboards. 
 	text-align: justify;
 }
 
@@ -213,17 +218,28 @@ h1
 
 .footer
 {
+	background-color:dimgray;
+	height: 100px;
+	color:white;
+}
+
+.icon
+{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: nowrap;
-	background-color:dimgray;
-	height: 50px;
 }
 
-.footer > *
+.icon > *
 {
-	padding:10px;
+	padding:20px 20px 10px 20px;
+}
+
+.bottom
+{
+	text-align: center;
+	margin:auto;
 }
 
 .projects
