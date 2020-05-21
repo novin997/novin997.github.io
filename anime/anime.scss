@@ -1,7 +1,22 @@
+$primary: black;
+$navbar-fonts:'Balsamiq Sans', cursive;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar
+{
+    padding:0;
+}
+
+.navbar-brand
+{
+    margin-right:0;
+    padding-bottom:0;
+    font-family: $navbar-fonts;
+}
 
 #chiyo_father
 {
-    width:60px;
-    height:40px;
+    width:1.4*70px;
+    height:70px;
 }
