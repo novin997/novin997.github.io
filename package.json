@@ -1,0 +1,22 @@
+{
+  "name": "novin997.github.io",
+  "version": "1.0.0",
+  "description": "Websites Development",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novin997/novin997.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/novin997/novin997.github.io/issues"
+  },
+  "homepage": "https://github.com/novin997/novin997.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
