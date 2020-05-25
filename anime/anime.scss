@@ -1,7 +1,13 @@
 $primary: black;
 $navbar-fonts:'Balsamiq Sans', cursive;
+$font-family-base:'Josefin Sans', sans-serif;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.card-header
+{
+    font-size:1.4rem;
+}
 
 .navbar
 {
