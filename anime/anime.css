@@ -10819,11 +10819,16 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .card-header {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .navbar {
   padding: 0;
+}
+
+.card-img-top {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .navbar-brand {
@@ -10834,5 +10839,10 @@ a.text-dark:hover, a.text-dark:focus {
 #chiyo_father {
   width: 98px;
   height: 70px;
+}
+
+#osaka_san {
+  width: 135px;
+  height: 75px;
 }
 /*# sourceMappingURL=anime.css.map */
