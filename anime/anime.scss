@@ -1,6 +1,20 @@
 $primary: black;
 $navbar-fonts:'Balsamiq Sans', cursive;
 $font-family-base:'Josefin Sans', sans-serif;
+$theme-colors: (
+    "blue": blue,
+    "purple": purple,
+    "pink": pink,
+    "red": red,
+    "orange": orange,
+    "yellow": yellow,
+    "green": green,
+    "teal": teal,
+    "cyan": cyan,
+    "white": white,
+    "gray": gray,
+    "dark-gray": darkgray
+);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
