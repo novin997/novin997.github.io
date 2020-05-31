@@ -9,6 +9,11 @@ $font-family-base:'Josefin Sans', sans-serif;
     font-size:1.2rem;
 }
 
+.card-footer
+{
+    min-height: 70px;
+}
+
 .navbar
 {
     padding:0;
@@ -17,6 +22,11 @@ $font-family-base:'Josefin Sans', sans-serif;
 .card-img-top
 {
     object-fit: cover; 
+}
+
+.embed-responsive
+{
+    min-height: 300px;
 }
 
 .navbar-brand

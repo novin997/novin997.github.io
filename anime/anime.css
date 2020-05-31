@@ -10822,6 +10822,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 1.2rem;
 }
 
+.card-footer {
+  min-height: 70px;
+}
+
 .navbar {
   padding: 0;
 }
@@ -10829,6 +10833,10 @@ a.text-dark:hover, a.text-dark:focus {
 .card-img-top {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.embed-responsive {
+  min-height: 300px;
 }
 
 .navbar-brand {
