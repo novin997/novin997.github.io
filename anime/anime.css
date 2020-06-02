@@ -12807,6 +12807,18 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
   min-height: 300px;
 }
 
+.embed-responsive::before {
+  content: none !important;
+}
+
+.embed-responsive-item:not(.collapsed) {
+  position: relative !important;
+}
+
+.embed-responsive-item .collapsed {
+  position: absolute !important;
+}
+
 .navbar-brand {
   margin-right: 0;
   padding-bottom: 0;
