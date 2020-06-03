@@ -1,12 +1,31 @@
 $primary: black;
 $navbar-fonts:'Balsamiq Sans', cursive;
 $font-family-base:'Josefin Sans', sans-serif;
+$theme-colors: (
+    "blue": blue,
+    "purple": purple,
+    "pink": pink,
+    "red": red,
+    "orange": orange,
+    "yellow": yellow,
+    "green": green,
+    "teal": teal,
+    "cyan": cyan,
+    "white": white,
+    "gray": gray,
+    "dark-gray": darkgray
+);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .card-header
 {
     font-size:1.2rem;
+}
+
+.card-footer
+{
+    min-height: 70px;
 }
 
 .navbar
@@ -16,7 +35,29 @@ $font-family-base:'Josefin Sans', sans-serif;
 
 .card-img-top
 {
-    object-fit: cover; 
+    object-fit: cover;
+}
+
+.embed-responsive
+{
+    min-height: 300px;
+}
+
+.embed-responsive-item
+{
+    min-height: 300px;
+}
+
+.embed-responsive::before{
+    content: none !important;
+}
+
+.embed-responsive-item:not(.collapsed){
+    position: relative !important;
+}
+
+.embed-responsive-item .collapsed{
+    position: absolute !important;
 }
 
 .navbar-brand

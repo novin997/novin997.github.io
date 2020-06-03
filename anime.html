@@ -32,102 +32,136 @@
         </nav>
 
         <!-- Cards for Anime -->
-        <div class="row p-5">
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card1">
-                    <div class="card-header text-truncate h-100 text-center">Clannad</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item" alt="clannad image">
-                    </div>   
-                    <div class="card-body collapse" data-toggle="collapse show" id="card1">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
+        <div id="Cards">
+            <div class="row p-5 card-parent">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card1">Clannad</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item collapsed" alt="Clannad Image" data-toggle="collapse" data-target="#card1">
+                        </div>   
+                        <div class="card-body collapse" data-toggle="collapse show" id="card1" data-parent="#Cards">
+                            <p>"The show where real man cries"</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-danger">Romance</span>
+                                <span class="badge badge-yellow">Melodrama</span>
+                                <span class="badge badge-cyan">Slice Of Life</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card2">
-                    <div class="card-header text-truncate h-100 text-center">Tatami Galaxy</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/Tatami_Galaxy.png" class="card-img-top rounded embed-responsive-item" alt="tatamiGalaxy_image">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card2">Tatami Galaxy</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/Tatami_Galaxy.png" class="card-img-top rounded embed-responsive-item collapsed" alt="Tatami Galaxy Image" data-toggle="collapse" data-target="#card2">
+                        </div>
+                        <div class="card-body collapse" data-toggle="collapse show" id="card2" data-parent="#Cards">
+                            <p>"There is no such thing as rose-coloured campus life"</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-purple">Psychological</span>
+                                <span class="badge badge-primary">Mystery</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: Tatami Galaxy Official Art</small>
+                        </div> 
                     </div>
-                    <div class="card-body collapse" data-toggle="collapse show" id="card2">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card3">
-                    <div class="card-header text-truncate h-100 text-center">Clannad</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item" alt="clannad image">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card3">Serial Experiment Lain</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/lain_yunfang.jpg" class="card-img-top rounded embed-responsive-item collapsed" alt="Serial Experiment Lain Image" data-toggle="collapse" data-target="#card3">
+                        </div>
+                        <div class="card-body collapse" data-toggle="collapse show" id="card3" data-parent="#Cards">
+                            <p>"Present Day Present Time"</p>
+                            <p>"You dont seem to understand"</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-purple">Psychological</span>
+                                <span class="badge badge-primary">Mystery</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: Zerochan</small>
+                        </div> 
                     </div>
-                    <div class="card-body collapse" data-toggle="collapse show" id="card3">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card4">
-                    <div class="card-header text-truncate h-100 text-center">Clannad</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item" alt="clannad image">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card4">Steins;Gate</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/steins_gate.jpg" class="card-img-top rounded embed-responsive-item collapsed" alt="Steins;Gate Image" data-toggle="collapse" data-target="#card4">
+                        </div>
+                        <div class="card-body collapse" data-toggle="collapse show" id="card4" data-parent="#Cards">
+                            <p>"Tuturu" -Shina Mayuri</p>
+                            <p>"No one knows what the future holds. That’s why its potential is infinite."</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-pink">Sci-Fi</span>
+                                <span class="badge badge-primary">Mystery</span>
+                                <span class="badge badge-gray">Time Travel</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: Steins; Gate</small>
+                        </div> 
                     </div>
-                    <div class="card-body collapse" data-toggle="collapse show" id="card4">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card5">
-                    <div class="card-header text-truncate h-100 text-center">Clannad</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item" alt="clannad image">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card5">Umineko</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/Umineko.jpg" class="card-img-top rounded embed-responsive-item collapsed" alt="Umineko Image" data-toggle="collapse" data-target="#card5">
+                        </div>
+                        <div class="card-body collapse" data-toggle="collapse show" id="card5" data-parent="#Cards">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
+                                eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-primary">Mystery</span>
+                                <span class="badge badge-danger">Horror</span>
+                                <span class="badge badge-purple">Psychological</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: Umineko Chiru Episode 8 Cover Art</small>
+                        </div> 
                     </div>
-                    <div class="card-body collapse" data-toggle="collapse show" id="card5">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-6 col-12 mt-3">
-                <div class = "card" data-toggle="collapse" data-target="#card6">
-                    <div class="card-header h-100 text-center">Clannad</div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img src="img/clannad.jpg" class="card-img-top rounded embed-responsive-item" alt="clannad image">
+                <div class="col-xl-3 col-sm-6 col-12 mt-3">
+                    <div class = "card">
+                        <div class="card-header text-truncate text-center collapsed" data-toggle="collapse" data-target="#card6">Higurashi</div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/higurashi.webp" class="card-img-top rounded embed-responsive-item collapsed" alt="Higurashi Image" data-toggle="collapse" data-target="#card6">
+                        </div>
+                        <div class="card-body collapse" data-toggle="collapse show" id="card6" data-parent="#Cards">
+                            <p>"Nipaa"</p>
+                            <p>"Mii~~~"</p>
+                            <p>"Usoda"</p>
+                            <p>"Omochikaeri"</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tags">
+                                <span class="badge badge-primary">Mystery</span>
+                                <span class="badge badge-danger">Horror</span>
+                                <span class="badge badge-purple">Psychological</span>
+                            </div>
+                            <small class="text-muted">Photo-Credit: <a href="https://whentheycry.fandom.com">https://whentheycry.fandom.com</a> </small>
+                        </div> 
                     </div>
-                    <div class="card-body collapse" data-toggle="collapse show" id="card6">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officiis, a recusandae earum esse eos beatae nostrum excepturi, 
-                            eum repellendus optio! Recusandae accusamus rem, minus autem iure mollitia corporis incidunt!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Photo-Credit: Clannad:After Story Official Art</small>
-                    </div> 
                 </div>
             </div>
         </div>
+        
 
     </body>
     <!-- Bootstrap 4 JS Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- Anime Main Page script -->
+    <script src="anime/anime.js" defer></script>
 </html>
