@@ -43,6 +43,11 @@ $theme-colors: (
     min-height: 300px;
 }
 
+.embed-responsive-item
+{
+    min-height: 300px;
+}
+
 .embed-responsive::before{
     content: none !important;
 }
