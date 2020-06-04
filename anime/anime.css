@@ -12790,7 +12790,7 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 200px;
+  width: 150px;
 }
 
 .card-header {
@@ -12841,7 +12841,7 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
 }
 
 #osaka_san {
-  width: 135px;
+  width: 75px;
   height: 75px;
 }
 
