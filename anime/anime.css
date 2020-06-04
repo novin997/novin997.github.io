@@ -12786,6 +12786,13 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
   }
 }
 
+.searchBar {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 200px;
+}
+
 .card-header {
   font-size: 1.2rem;
 }

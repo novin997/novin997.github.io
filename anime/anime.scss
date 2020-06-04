@@ -19,6 +19,12 @@ $theme-colors: (
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.searchBar
+{
+    justify-content: right;
+    width:200px;
+}
+
 .card-header
 {
     font-size:1.2rem;
