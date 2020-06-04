@@ -1,0 +1,59 @@
+$Piedra-fonts: 'Piedra', cursive;
+
+* *::before *::after
+{
+    box-sizing: border-box;
+    padding:0;
+}
+
+h1 
+{
+    font-family: $Piedra-fonts !important;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.gameboard
+{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    margin:auto;
+    text-align: center;
+    width: 50%;
+}
+
+.cross
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    
+    $widthCross: 25%;
+    
+    &::before{
+        position: absolute;
+        content: "";
+        background-color:black;
+        z-index: -1;
+        width: $widthCross;
+        left: 50%-$widthCross/2;
+        height: 100%;
+        transform: rotate(45deg);
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        background-color:black;
+        z-index: -1;
+        width: $widthCross;
+        left: 50%-$widthCross/2;
+        height: 100%;
+        transform: rotate(-45deg);
+    }
+}
+
+
+   
+   
