@@ -17,42 +17,82 @@ h1
 .gameboard
 {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,1fr);
     margin:auto;
     text-align: center;
-    width: 50%;
+    width: 360px;
+    height: 100%;
+
+    .cross
+    {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: relative;
+        min-width:100px;
+        height:100px;
+        
+        $widthCross: 25%;
+
+        &:not(:nth-child(n+7))
+        {
+            border-bottom: 3px solid black;
+        }
+
+        &:nth-child(3n-2)
+        {
+
+            border-right: 3px solid black;
+        }
+        
+        &:nth-child(3n-1)
+        {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        padding:0;
+        &:nth-child(3n)
+        {
+            border-left: 3px solid black;
+        } 
+
+        &::before{
+            position: absolute;
+            content: "";
+            background-color:black;
+            z-index: -1;
+            width: $widthCross;
+            left: 50%-$widthCross/2;
+            height: 100%;
+            transform: rotate(45deg);
+        }
+
+        &::after{
+            position: absolute;
+            content: "";
+            background-color:black;
+            z-index: -1;
+            width: $widthCross;
+            left: 50%-$widthCross/2;
+            height: 100%;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    .box 
+    {
+        &:nth-child(3n-2)
+        {
+            border-right: 3px solid black;
+        } 
+    }
+      
 }
 
-.cross
-{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    
-    $widthCross: 25%;
-    
-    &::before{
-        position: absolute;
-        content: "";
-        background-color:black;
-        z-index: -1;
-        width: $widthCross;
-        left: 50%-$widthCross/2;
-        height: 100%;
-        transform: rotate(45deg);
-    }
 
-    &::after{
-        position: absolute;
-        content: "";
-        background-color:black;
-        z-index: -1;
-        width: $widthCross;
-        left: 50%-$widthCross/2;
-        height: 100%;
-        transform: rotate(-45deg);
-    }
-}
+
+
 
 
    

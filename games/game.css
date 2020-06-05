@@ -14,20 +14,48 @@ h1 {
 .gameboard {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   margin: auto;
   text-align: center;
-  width: 50%;
+  width: 360px;
+  height: 100%;
 }
 
-.cross {
+.gameboard .cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  width: 100px;
+  min-width: 100px;
   height: 100px;
+  padding: 0;
 }
 
-.cross::before {
+.gameboard .cross:not(:nth-child(n+7)) {
+  border-bottom: 3px solid black;
+}
+
+.gameboard .cross:nth-child(3n-2) {
+  border-right: 3px solid black;
+}
+
+.gameboard .cross:nth-child(3n-1) {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.gameboard .cross:nth-child(3n) {
+  border-left: 3px solid black;
+}
+
+.gameboard .cross::before {
   position: absolute;
   content: "";
   background-color: black;
@@ -39,7 +67,7 @@ h1 {
           transform: rotate(45deg);
 }
 
-.cross::after {
+.gameboard .cross::after {
   position: absolute;
   content: "";
   background-color: black;
@@ -49,5 +77,9 @@ h1 {
   height: 100%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.gameboard .box:nth-child(3n-2) {
+  border-right: 3px solid black;
 }
 /*# sourceMappingURL=game.css.map */
