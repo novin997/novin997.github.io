@@ -99,6 +99,11 @@ $theme-colors: (
     text-align: center;
 }
 
+.form-inline .form-control
+{
+    width:100%;
+}
+
 // #frontImage
 // {
 //     object-fit: cover;

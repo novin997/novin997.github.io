@@ -12863,4 +12863,8 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
   font-size: 4rem !important;
   text-align: center;
 }
+
+.form-inline .form-control {
+  width: 100%;
+}
 /*# sourceMappingURL=anime.css.map */
