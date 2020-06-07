@@ -1,0 +1,101 @@
+* *::before *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Piedra", cursive !important;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.gameboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  text-align: center;
+  width: 360px;
+  height: 100%;
+}
+
+.gameboard .boardOutline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  min-width: 100px;
+  height: 100px;
+  padding: 0;
+}
+
+.gameboard .boardOutline:not(:nth-child(n+7)) {
+  border-bottom: 3px solid black;
+}
+
+.gameboard .boardOutline:nth-child(3n-2) {
+  border-right: 3px solid black;
+}
+
+.gameboard .boardOutline:nth-child(3n-1) {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.gameboard .boardOutline:nth-child(3n) {
+  border-left: 3px solid black;
+}
+
+.gameboard .cross::before, .gameboard .empty-cross:hover::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  z-index: 1;
+  width: 25%;
+  left: 37.5%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.gameboard .cross::after, .gameboard .empty-cross:hover::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  z-index: 1;
+  width: 25%;
+  left: 37.5%;
+  height: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.gameboard .circle::before, .gameboard .empty-circle:hover::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  z-index: -1;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+}
+
+.gameboard .circle::after, .gameboard .empty-circle:hover::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  z-index: -1;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=game.css.map */

@@ -1,0 +1,130 @@
+$Piedra-fonts: 'Piedra', cursive;
+
+* *::before *::after
+{
+    box-sizing: border-box;
+    padding:0;
+}
+
+h1 
+{
+    font-family: $Piedra-fonts !important;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.gameboard
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:auto;
+    text-align: center;
+    width: 360px;
+    height: 100%;
+
+    $widthCross: 25%;
+
+    .boardOutline
+    {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: relative;
+        min-width:100px;
+        height:100px;
+        
+        &:not(:nth-child(n+7))
+        {
+            border-bottom: 3px solid black;
+        }
+
+        &:nth-child(3n-2)
+        {
+
+            border-right: 3px solid black;
+        }
+        
+        &:nth-child(3n-1)
+        {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        padding:0;
+        &:nth-child(3n)
+        {
+            border-left: 3px solid black;
+        }
+    }
+
+    .empty-circle
+    {
+        &:hover{
+            @extend .circle;
+        }
+    }
+
+    .empty-cross
+    {
+        &:hover{
+            @extend .cross;
+        }
+    }
+
+    .cross
+    {
+        &::before{
+            position: absolute;
+            content: "";
+            background-color:black;
+            z-index: 1;
+            width: $widthCross;
+            left: 50%-$widthCross/2;
+            height: 100%;
+            transform: rotate(45deg);
+        }
+
+        &::after{
+            position: absolute;
+            content: "";
+            background-color:black;
+            z-index: 1;
+            width: $widthCross;
+            left: 50%-$widthCross/2;
+            height: 100%;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    .circle
+    {
+        &::before{
+            position: absolute;
+            content: "";
+            background-color:black;
+            z-index: -1;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+        }
+
+        &::after{
+            position: absolute;
+            content: "";
+            background-color:white;
+            z-index: -1;
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+
+
+   
+   
