@@ -18,7 +18,7 @@ function setupGame(){
 };
 
 function changeTurn()
-{
+{    
     if(curr=="circle")
     {
         curr = "cross";
