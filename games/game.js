@@ -17,6 +17,7 @@ let winConditions = [
     [6,7,8],
 ];
 let curr = "circle";
+let boardCount = 0; 
 
 function setupGame(){
     boxs.forEach((box,i)=>{
@@ -26,6 +27,7 @@ function setupGame(){
         box.classList.add("empty-circle");
     });
     curr = "circle";
+    boardCount = 0;
 };
 
 function changeTurn()
@@ -68,6 +70,7 @@ function checkWinCond()
 
 boxs.forEach((box,index)=> {
     box.addEventListener("click",(e)=>{
+        boardCount++;
         if(curr=="circle" && board[index]==null)
         {
             board[index]="circle";
@@ -80,8 +83,10 @@ boxs.forEach((box,index)=> {
             box.classList.remove("empty-cross");
             box.classList.add("cross");
         }
+        changeTurn(); 
         checkWinCond();
-        changeTurn();               
+        if(boardCount == 9)
+            setupGame(); 
     });
 });
 
