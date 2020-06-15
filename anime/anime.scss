@@ -92,11 +92,12 @@ $theme-colors: (
     align-items: center;
     background-image: url(../img/K-On.png);
 	background-size: cover;
-	height:700px;
+	height:600px;
     background-repeat: no-repeat;
     font-family: $font-title;
     font-size:4rem !important;
     text-align: center;
+    color:black;
 }
 
 .form-inline .form-control
