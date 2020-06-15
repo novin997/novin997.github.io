@@ -1,4 +1,5 @@
 const boxs = document.querySelectorAll(".boardOutline");
+const sock = io();
 
 let board = [
     [null,null,null],
