@@ -13,16 +13,28 @@
 </head>
     <body>
         <h1>Tic-Tat-Toe</h1>
-        <div class="gameboard">
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
-            <div class="empty-circle boardOutline"></div>
+        <div class="gamecontainer">
+            <div class="gameboard">
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+                <div class="empty-circle boardOutline"></div>
+            </div>
+            <div class="chatcontainer">
+                <ul class="chatlist">
+                    <li>Hello, nice to meet you</li>
+                    <li>Thank you</li>
+                </ul>
+                <form class = "chatform" action="">
+                    <input type="text" placeholder="Type Here">
+                    <button type="submit">Enter</button>
+                </form>
+            </div>
         </div>
     </body>
     <script src="socket.io/socket.io.js" defer></script>

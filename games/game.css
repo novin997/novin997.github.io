@@ -11,12 +11,29 @@ h1 {
   text-decoration: underline;
 }
 
+.gamecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.chatcontainer {
+  width: 400px;
+  background-color: darkorange;
+}
+
+.chatform {
+  margin-left: 20px;
+}
+
 .gameboard {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  margin: auto;
   text-align: center;
   width: 360px;
   height: 100%;

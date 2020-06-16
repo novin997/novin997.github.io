@@ -14,11 +14,27 @@ h1
     text-decoration: underline;
 }
 
+.gamecontainer
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chatcontainer
+{
+    width: 400px;
+    background-color: darkorange;
+}
+
+.chatform
+{
+    margin-left:20px;
+}
+
 .gameboard
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin:auto;
     text-align: center;
     width: 360px;
     height: 100%;
