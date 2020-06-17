@@ -4,21 +4,31 @@ const chatList = document.querySelector(".chatlist");
 const chatForm = document.querySelector(".chatform");
 const chatInput = document.querySelector("#chatInput");
 const name = prompt("Please enter your name to play the game?");
+var player = null;
 
 sock.on("chat-message",(data) => {
     addMessage(data);
+    if(data.search(": start"))
+        player = "cross";
+        setupGame();
 });
 
 chatForm.addEventListener("submit",(e) => {
     e.preventDefault();
     const message = chatInput.value;
     sock.emit("send-message",message);
+    if(message == "start")
+    {
+        player = "circle";
+        setupGame();
+    }
     chatInput.value = "";
 });
 
 function addMessage(message){
     const messageElement = document.createElement("div");
-    messageElement.innerText = message;
+    messageElement.innerText = name + ": " + message;
+    messageElement.style.backgroundColor = "silver";
     chatList.appendChild(messageElement);
 };
 
@@ -53,7 +63,7 @@ function setupGame(){
 };
 
 function changeTurn()
-{    
+{   
     if(curr=="circle")
     {
         curr = "cross";
