@@ -102,23 +102,26 @@ function checkWinCond()
 
 boxs.forEach((box,index)=> {
     box.addEventListener("click",(e)=>{
-        boardCount++;
-        if(curr=="circle" && board[index]==null)
+        if(curr==player)
         {
-            board[index]="circle";
-            box.classList.remove("empty-circle");
-            box.classList.add("circle");
+            boardCount++;
+            if(curr=="circle" && board[index]==null)
+            {
+                board[index]="circle";
+                box.classList.remove("empty-circle");
+                box.classList.add("circle");
+            }
+            else if(curr=="cross" && board[index]==null)
+            {
+                board[index]="cross";
+                box.classList.remove("empty-cross");
+                box.classList.add("cross");
+            }
+            changeTurn(); 
+            checkWinCond();
+            if(boardCount == 9)
+                setupGame(); 
         }
-        else if(curr=="cross" && board[index]==null)
-        {
-            board[index]="cross";
-            box.classList.remove("empty-cross");
-            box.classList.add("cross");
-        }
-        changeTurn(); 
-        checkWinCond();
-        if(boardCount == 9)
-            setupGame(); 
     });
 });
 
