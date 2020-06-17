@@ -1,5 +1,26 @@
 const boxs = document.querySelectorAll(".boardOutline");
 const sock = io();
+const chatList = document.querySelector(".chatlist");
+const chatForm = document.querySelector(".chatform");
+const chatInput = document.querySelector("#chatInput");
+const name = prompt("Please enter your name to play the game?");
+
+sock.on("chat-message",(data) => {
+    addMessage(data);
+});
+
+chatForm.addEventListener("submit",(e) => {
+    e.preventDefault();
+    const message = chatInput.value;
+    sock.emit("send-message",message);
+    chatInput.value = "";
+});
+
+function addMessage(message){
+    const messageElement = document.createElement("div");
+    messageElement.innerText = message;
+    chatList.appendChild(messageElement);
+};
 
 let board = [
     [null,null,null],
@@ -92,3 +113,4 @@ boxs.forEach((box,index)=> {
 });
 
 setupGame();
+

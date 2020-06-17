@@ -28,7 +28,17 @@ h1
 
 .chatform
 {
-    margin-left:20px;
+    margin:auto;
+    width:90%;
+    padding:0px 0px 10px 0px;
+}
+
+.chatlist
+{
+    height:250px;
+    width:80%;
+    margin:10px auto 10px auto;
+    background-color: white;
 }
 
 .gameboard
