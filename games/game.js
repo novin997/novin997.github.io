@@ -10,7 +10,24 @@ sock.on("chat-message",(data) => {
     addMessage(data);
     if(data.search(": start"))
         player = "cross";
-        setupGame();
+        setupGame(player);
+});
+
+sock.on("move-message",(index) => {
+    boardCount++;
+    console.log(boxs[index]);
+    if(curr=="circle")
+    {
+        board[index]="circle";
+        boxs[index].classList.remove("empty-circle","empty-cross");
+        boxs[index].classList.add("circle");
+    }
+    else
+    {
+        board[index]="cross";
+        boxs[index].classList.remove("empty-circle","empty-cross");
+        boxs[index].classList.add("cross");
+    }
 });
 
 chatForm.addEventListener("submit",(e) => {
@@ -20,7 +37,7 @@ chatForm.addEventListener("submit",(e) => {
     if(message == "start")
     {
         player = "circle";
-        setupGame();
+        setupGame(player);
     }
     chatInput.value = "";
 });
@@ -51,12 +68,15 @@ let winConditions = [
 let curr = "circle";
 let boardCount = 0; 
 
-function setupGame(){
+function setupGame(state){
     boxs.forEach((box,i)=>{
         // Reset all the initial board value to null and set the initial board for circle first
         board[i] = null;
-        box.classList.remove("circle","cross","empty-cross");
-        box.classList.add("empty-circle");
+        box.classList.remove("circle","cross","empty-cross","empty-circle");
+        if (state=="circle")
+            box.classList.add("empty-circle");
+        else
+            box.classList.add("empty-cross");
     });
     curr = "circle";
     boardCount = 0;
@@ -64,28 +84,32 @@ function setupGame(){
 
 function changeTurn()
 {   
+    // if(curr=="circle")
+    // {
+    //     curr = "cross";
+    //     boxs.forEach((box,index)=> {
+    //         if(board[index]==null)
+    //         {
+    //             box.classList.remove("empty-circle");
+    //             box.classList.add("empty-cross");    
+    //         }
+    //     }); 
+    // }    
+    // else
+    // {
+    //     curr = "circle";
+    //     boxs.forEach((box,index)=> {
+    //         if(board[index]==null)
+    //         {
+    //             box.classList.remove("empty-cross");
+    //             box.classList.add("empty-circle");     
+    //         }
+    //     });
+    // }
     if(curr=="circle")
-    {
         curr = "cross";
-        boxs.forEach((box,index)=> {
-            if(board[index]==null)
-            {
-                box.classList.remove("empty-circle");
-                box.classList.add("empty-cross");    
-            }
-        }); 
-    }    
     else
-    {
-        curr = "circle";
-        boxs.forEach((box,index)=> {
-            if(board[index]==null)
-            {
-                box.classList.remove("empty-cross");
-                box.classList.add("empty-circle");     
-            }
-        });
-    }           
+        curr = "circle";          
 };
 
 function checkWinCond()
@@ -95,7 +119,7 @@ function checkWinCond()
         if(board[val[0]]==board[val[1]] && board[val[1]]==board[val[2]] && board[val[0]]!=null) 
         {
             console.log("game has ended");
-            setupGame();
+            //setupGame();
         }
     });
 };
@@ -104,23 +128,28 @@ boxs.forEach((box,index)=> {
     box.addEventListener("click",(e)=>{
         if(curr==player)
         {
+            var message = null;
             boardCount++;
             if(curr=="circle" && board[index]==null)
             {
                 board[index]="circle";
                 box.classList.remove("empty-circle");
                 box.classList.add("circle");
+                message = index;
             }
             else if(curr=="cross" && board[index]==null)
             {
                 board[index]="cross";
                 box.classList.remove("empty-cross");
                 box.classList.add("cross");
+                message = index;
             }
+            sock.emit("player-move",message);
             changeTurn(); 
             checkWinCond();
             if(boardCount == 9)
-                setupGame(); 
+                //setupGame();
+                console.log("The result of the game is a draw"); 
         }
     });
 });

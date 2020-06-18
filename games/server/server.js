@@ -22,6 +22,10 @@ io.on("connection",(sock)=>{
         sock.broadcast.emit("chat-message",message);
         console.log(message);
     });
+    sock.on("player-move",(message)=>
+    {
+        sock.broadcast.emit("move-message",message);
+    });
 });
 
 server.on("error",()=>{
