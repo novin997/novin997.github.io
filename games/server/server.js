@@ -26,6 +26,14 @@ io.on("connection",(sock)=>{
     {
         sock.broadcast.emit("move-message",message);
     });
+    sock.on("name-message",(name)=>
+    {
+        sock.broadcast.emit("name-broadcast",name);
+    });
+    sock.on("reply-name",(name)=>
+    {
+        sock.broadcast.emit("reply-name-broadcast",name);
+    });
 });
 
 server.on("error",()=>{

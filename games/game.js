@@ -4,7 +4,39 @@ const chatList = document.querySelector(".chatlist");
 const chatForm = document.querySelector(".chatform");
 const chatInput = document.querySelector("#chatInput");
 const name = prompt("Please enter your name to play the game?");
+
+let board = [
+    [null,null,null],
+    [null,null,null],
+    [null,null,null]
+];
+
+let winConditions = [
+    [0,1,2],
+    [0,3,6],
+    [0,4,8],
+    [1,4,7],
+    [2,4,6],
+    [2,5,8],
+    [3,4,5],
+    [6,7,8],
+];
+
 var player = null;
+var enemyName = null;
+let curr = "circle";
+let boardCount = 0;
+
+sock.on("name-broadcast",(message) => {
+    enemyName = message;
+    console.log(enemyName);
+    sock.emit("reply-name",name)
+});
+
+sock.on("reply-name-broadcast",(message) => {
+    enemyName = message;
+    console.log(enemyName);
+});
 
 sock.on("chat-message",(data) => {
     addMessage(data);
@@ -28,6 +60,10 @@ sock.on("move-message",(index) => {
         boxs[index].classList.remove("empty-circle","empty-cross");
         boxs[index].classList.add("cross");
     }
+    changeTurn();
+    checkWinCond();
+    if(boardCount == 9)
+        console.log("The result of the game is a draw");
 });
 
 chatForm.addEventListener("submit",(e) => {
@@ -35,7 +71,8 @@ chatForm.addEventListener("submit",(e) => {
     const message = chatInput.value;
     sock.emit("send-message",message);
     if(message == "start")
-    {
+    { 
+        sock.emit("name-message",name);
         player = "circle";
         setupGame(player);
     }
@@ -49,25 +86,6 @@ function addMessage(message){
     chatList.appendChild(messageElement);
 };
 
-let board = [
-    [null,null,null],
-    [null,null,null],
-    [null,null,null]
-];
-
-let winConditions = [
-    [0,1,2],
-    [0,3,6],
-    [0,4,8],
-    [1,4,7],
-    [2,4,6],
-    [2,5,8],
-    [3,4,5],
-    [6,7,8],
-];
-let curr = "circle";
-let boardCount = 0; 
-
 function setupGame(state){
     boxs.forEach((box,i)=>{
         // Reset all the initial board value to null and set the initial board for circle first
@@ -80,6 +98,15 @@ function setupGame(state){
     });
     curr = "circle";
     boardCount = 0;
+};
+
+function emptyBoard()
+{
+    boxs.forEach((box,i)=>{
+        // Reset all the initial board value to null and set the initial board for circle first
+        board[i] = null;
+        box.classList.remove("circle","cross","empty-cross","empty-circle");
+    }); 
 };
 
 function changeTurn()
@@ -118,8 +145,8 @@ function checkWinCond()
     winConditions.forEach((val,i)=>{
         if(board[val[0]]==board[val[1]] && board[val[1]]==board[val[2]] && board[val[0]]!=null) 
         {
-            console.log("game has ended");
-            //setupGame();
+            console.log("Game has ended");
+            emptyBoard();
         }
     });
 };
@@ -148,7 +175,7 @@ boxs.forEach((box,index)=> {
             changeTurn(); 
             checkWinCond();
             if(boardCount == 9)
-                //setupGame();
+                emptyBoard();
                 console.log("The result of the game is a draw"); 
         }
     });
