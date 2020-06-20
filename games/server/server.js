@@ -13,7 +13,7 @@ console.log(clientPath);
 
 app.use(express.static(clientPath));
 
-var portNumber = 8080;
+var portNumber = process.env.PORT || 8080;
 
 io.on("connection",(sock)=>{
     sock.emit("message","Hi, you are connected");
