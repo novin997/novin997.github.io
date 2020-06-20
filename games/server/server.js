@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = socketio(server);
 
-var clientPath = path.join(__dirname, "../");
+var clientPath = path.join(__dirname, "../../");
 console.log(clientPath);
 
 app.use(express.static(clientPath));
