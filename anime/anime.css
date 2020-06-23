@@ -12790,7 +12790,7 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 150px;
+  width: 180px;
 }
 
 .card-header {
@@ -12838,6 +12838,7 @@ a.text-dark-gray:hover, a.text-dark-gray:focus {
 #chiyo_father {
   width: 98px;
   height: 70px;
+  margin-left: -10px;
 }
 
 #osaka_san {
