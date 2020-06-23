@@ -3,6 +3,7 @@ const sock = io();
 const chatList = document.querySelector(".chatlist");
 const chatForm = document.querySelector(".chatform");
 const chatInput = document.querySelector("#chatInput");
+const gameInfo = document.querySelector(".gameinfo");
 const name = prompt("Please enter your name to play the game?");
 
 let board = [
@@ -40,9 +41,14 @@ sock.on("reply-name-broadcast",(message) => {
 
 sock.on("chat-message",(data) => {
     addMessage(data);
-    if(data.search(": start"))
+    if(data.includes("start"))
+    {
+        console.log("test");
+        addMessage(`${enemyName} has started a game of Tic Tat Toe`);
         player = "cross";
         setupGame(player);
+        gameInfo.innerHTML = `You are ${player}. It is ${enemyName} turn.`;
+    }     
 });
 
 sock.on("move-message",(index) => {
@@ -69,13 +75,14 @@ sock.on("move-message",(index) => {
 chatForm.addEventListener("submit",(e) => {
     e.preventDefault();
     const message = chatInput.value;
-    sock.emit("send-message",message);
     if(message == "start")
-    { 
+    {
         sock.emit("name-message",name);
         player = "circle";
         setupGame(player);
+        gameInfo.innerHTML = `You are ${player}. It is your turn.`;
     }
+    sock.emit("send-message",message);
     chatInput.value = "";
 });
 
@@ -111,32 +118,22 @@ function emptyBoard()
 
 function changeTurn()
 {   
-    // if(curr=="circle")
-    // {
-    //     curr = "cross";
-    //     boxs.forEach((box,index)=> {
-    //         if(board[index]==null)
-    //         {
-    //             box.classList.remove("empty-circle");
-    //             box.classList.add("empty-cross");    
-    //         }
-    //     }); 
-    // }    
-    // else
-    // {
-    //     curr = "circle";
-    //     boxs.forEach((box,index)=> {
-    //         if(board[index]==null)
-    //         {
-    //             box.classList.remove("empty-cross");
-    //             box.classList.add("empty-circle");     
-    //         }
-    //     });
-    // }
     if(curr=="circle")
+    {
         curr = "cross";
+        if(player == "cross")
+            gameInfo.innerHTML = `You are ${player}. It is your turn.`;
+        else
+            gameInfo.innerHTML = `You are ${player}. It is ${enemyName} turn.`;
+    }
     else
-        curr = "circle";          
+    {
+        curr = "circle";
+        if(player == "circle")
+            gameInfo.innerHTML = `You are ${player}. It is your turn.`;
+        else
+            gameInfo.innerHTML = `You are ${player}. It is ${enemyName} turn.`; 
+    }               
 };
 
 function checkWinCond()
@@ -145,6 +142,16 @@ function checkWinCond()
     winConditions.forEach((val,i)=>{
         if(board[val[0]]==board[val[1]] && board[val[1]]==board[val[2]] && board[val[0]]!=null) 
         {
+            if(player==curr)
+            {
+                console.log("test");
+                gameInfo.innerHTML = `${enemyName} win. Please type <u>start</u> in the chat to play again.`;
+            }
+            else
+            {
+                console.log("test");
+                gameInfo.innerHTML = `You win. Please type <u>start</u> in the chat to play again.`;                    
+            }
             console.log("Game has ended");
             emptyBoard();
         }

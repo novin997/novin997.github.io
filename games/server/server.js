@@ -20,7 +20,6 @@ io.on("connection",(sock)=>{
     sock.on("send-message",(message)=>
     {
         sock.broadcast.emit("chat-message",message);
-        console.log(message);
     });
     sock.on("player-move",(message)=>
     {
