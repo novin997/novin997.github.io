@@ -95,14 +95,52 @@ h4
     .empty-circle
     {
         &:hover{
-            @extend .circle;
+            &::before{
+                position: absolute;
+                content: "";
+                background-color:lightslategray;
+                z-index: -1;
+                width: 75%;
+                height: 75%;
+                border-radius: 50%;
+            }
+    
+            &::after{
+                position: absolute;
+                content: "";
+                background-color:white;
+                z-index: -1;
+                width: 60%;
+                height: 60%;
+                border-radius: 50%;
+            }    
         }
     }
 
     .empty-cross
     {
         &:hover{
-            @extend .cross;
+            &::before{
+                position: absolute;
+                content: "";
+                background-color:lightslategray;
+                z-index: 1;
+                width: $widthCross;
+                left: 50%-$widthCross/2;
+                height: 100%;
+                transform: rotate(45deg);
+            }
+    
+            &::after{
+                position: absolute;
+                content: "";
+                background-color:lightslategray;
+                z-index: 1;
+                width: $widthCross;
+                left: 50%-$widthCross/2;
+                height: 100%;
+                transform: rotate(-45deg);
+            }    
         }
     }
 

@@ -13,7 +13,7 @@ h1 {
 
 h4 {
   font-family: "Piedra", cursive !important;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -88,7 +88,51 @@ h4 {
   border-left: 3px solid black;
 }
 
-.gameboard .cross::before, .gameboard .empty-cross:hover::before {
+.gameboard .empty-circle:hover::before {
+  position: absolute;
+  content: "";
+  background-color: lightslategray;
+  z-index: -1;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+}
+
+.gameboard .empty-circle:hover::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  z-index: -1;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+.gameboard .empty-cross:hover::before {
+  position: absolute;
+  content: "";
+  background-color: lightslategray;
+  z-index: 1;
+  width: 25%;
+  left: 37.5%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.gameboard .empty-cross:hover::after {
+  position: absolute;
+  content: "";
+  background-color: lightslategray;
+  z-index: 1;
+  width: 25%;
+  left: 37.5%;
+  height: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.gameboard .cross::before {
   position: absolute;
   content: "";
   background-color: black;
@@ -100,7 +144,7 @@ h4 {
           transform: rotate(45deg);
 }
 
-.gameboard .cross::after, .gameboard .empty-cross:hover::after {
+.gameboard .cross::after {
   position: absolute;
   content: "";
   background-color: black;
@@ -112,7 +156,7 @@ h4 {
           transform: rotate(-45deg);
 }
 
-.gameboard .circle::before, .gameboard .empty-circle:hover::before {
+.gameboard .circle::before {
   position: absolute;
   content: "";
   background-color: black;
@@ -122,7 +166,7 @@ h4 {
   border-radius: 50%;
 }
 
-.gameboard .circle::after, .gameboard .empty-circle:hover::after {
+.gameboard .circle::after {
   position: absolute;
   content: "";
   background-color: white;
