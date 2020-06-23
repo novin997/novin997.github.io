@@ -54,6 +54,54 @@ h4
     margin-left: 20px;
 }
 
+@mixin createCircle($color)
+{
+    &::before{
+        position: absolute;
+        content: "";
+        background-color:$color;
+        z-index: -1;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        background-color:white;
+        z-index: -1;
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+    }  
+}
+
+@mixin createCross($color,$widthCross)
+{
+    &::before{
+        position: absolute;
+        content: "";
+        background-color:$color;
+        z-index: 1;
+        width: $widthCross;
+        left: 50%-$widthCross/2;
+        height: 100%;
+        transform: rotate(45deg);
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        background-color:$color;
+        z-index: 1;
+        width: $widthCross;
+        left: 50%-$widthCross/2;
+        height: 100%;
+        transform: rotate(-45deg);
+    }        
+}
+
 .gameboard
 {
     display: grid;
@@ -100,101 +148,25 @@ h4
     .empty-circle
     {
         &:hover{
-            &::before{
-                position: absolute;
-                content: "";
-                background-color:lightslategray;
-                z-index: -1;
-                width: 75%;
-                height: 75%;
-                border-radius: 50%;
-            }
-    
-            &::after{
-                position: absolute;
-                content: "";
-                background-color:white;
-                z-index: -1;
-                width: 60%;
-                height: 60%;
-                border-radius: 50%;
-            }    
+            @include createCircle(lightgray);    
         }
     }
 
     .empty-cross
     {
         &:hover{
-            &::before{
-                position: absolute;
-                content: "";
-                background-color:lightslategray;
-                z-index: 1;
-                width: $widthCross;
-                left: 50%-$widthCross/2;
-                height: 100%;
-                transform: rotate(45deg);
-            }
-    
-            &::after{
-                position: absolute;
-                content: "";
-                background-color:lightslategray;
-                z-index: 1;
-                width: $widthCross;
-                left: 50%-$widthCross/2;
-                height: 100%;
-                transform: rotate(-45deg);
-            }    
+            @include createCross(lightgray,$widthCross);    
         }
     }
 
     .cross
     {
-        &::before{
-            position: absolute;
-            content: "";
-            background-color:black;
-            z-index: 1;
-            width: $widthCross;
-            left: 50%-$widthCross/2;
-            height: 100%;
-            transform: rotate(45deg);
-        }
-
-        &::after{
-            position: absolute;
-            content: "";
-            background-color:black;
-            z-index: 1;
-            width: $widthCross;
-            left: 50%-$widthCross/2;
-            height: 100%;
-            transform: rotate(-45deg);
-        }
+        @include createCross(black,$widthCross);  
     }
     
     .circle
     {
-        &::before{
-            position: absolute;
-            content: "";
-            background-color:black;
-            z-index: -1;
-            width: 75%;
-            height: 75%;
-            border-radius: 50%;
-        }
-
-        &::after{
-            position: absolute;
-            content: "";
-            background-color:white;
-            z-index: -1;
-            width: 60%;
-            height: 60%;
-            border-radius: 50%;
-        }
+        @include createCircle(black); 
     }
 }
 

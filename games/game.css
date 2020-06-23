@@ -95,7 +95,7 @@ h4 {
 .gameboard .empty-circle:hover::before {
   position: absolute;
   content: "";
-  background-color: lightslategray;
+  background-color: lightgray;
   z-index: -1;
   width: 75%;
   height: 75%;
@@ -115,7 +115,7 @@ h4 {
 .gameboard .empty-cross:hover::before {
   position: absolute;
   content: "";
-  background-color: lightslategray;
+  background-color: lightgray;
   z-index: 1;
   width: 25%;
   left: 37.5%;
@@ -127,7 +127,7 @@ h4 {
 .gameboard .empty-cross:hover::after {
   position: absolute;
   content: "";
-  background-color: lightslategray;
+  background-color: lightgray;
   z-index: 1;
   width: 25%;
   left: 37.5%;
