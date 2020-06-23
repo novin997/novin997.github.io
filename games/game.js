@@ -142,6 +142,16 @@ function checkWinCond()
     winConditions.forEach((val,i)=>{
         if(board[val[0]]==board[val[1]] && board[val[1]]==board[val[2]] && board[val[0]]!=null) 
         {
+            if(player==curr)
+            {
+                console.log("test");
+                gameInfo.innerHTML = `${enemyName} win. Please type <u>start</u> in the chat to play again.`;
+            }
+            else
+            {
+                console.log("test");
+                gameInfo.innerHTML = `You win. Please type <u>start</u> in the chat to play again.`;                    
+            }
             console.log("Game has ended");
             emptyBoard();
         }
