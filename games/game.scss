@@ -29,14 +29,13 @@ h4
 
 .chatcontainer
 {
-    width: 400px;
+    width: 340px;
     background-color: darkorange;
 }
 
 .chatform
 {
     margin:auto;
-    width:90%;
     padding:0px 0px 10px 0px;
 }
 
@@ -49,12 +48,18 @@ h4
     overflow: scroll;
 }
 
+#chatInput
+{
+    width: 60%;
+    margin-left: 20px;
+}
+
 .gameboard
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
-    width: 360px;
+    width: 340px;
     height: 100%;
 
     $widthCross: 25%;
@@ -155,6 +160,19 @@ h4
     }
 }
 
+@media only screen and (max-width: 860px) {
+    .gamecontainer
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chatcontainer
+    {
+        margin-top:10px;
+    }
+}
 
 
 
