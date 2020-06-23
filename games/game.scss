@@ -160,7 +160,7 @@ h4
     }
 }
 
-@media only screen and (max-width: 860px) {
+@media all and (max-width: 860px) {
     .gamecontainer
     {
         flex-direction: column;

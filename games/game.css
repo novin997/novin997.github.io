@@ -136,7 +136,7 @@ h4 {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 860px) {
+@media all and (max-width: 860px) {
   .gamecontainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
