@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = socketio(server);
 
-var clientPath = path.join(__dirname, "../");
+var clientPath = path.join(__dirname, "../../");
 console.log(clientPath);
 
 app.use(express.static(clientPath));
@@ -20,7 +20,6 @@ io.on("connection",(sock)=>{
     sock.on("send-message",(message)=>
     {
         sock.broadcast.emit("chat-message",message);
-        console.log(message);
     });
     sock.on("player-move",(message)=>
     {
