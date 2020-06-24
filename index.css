@@ -40,10 +40,11 @@ nav > *
     font-family: 'Kadwa', serif;
     font-size: 2rem;
     margin: 30px auto auto auto;
+    display: none;
 }
 
-.not-show{
-    display:none;
+.show{
+    display:block;
 }
 
 .next{
@@ -54,6 +55,7 @@ nav > *
     width:10%;
     align-self: center;
     text-align: center;
+    outline: none;
 }
 
 .prev{
@@ -64,7 +66,26 @@ nav > *
     width:10%;
     align-self: center;
     text-align: center;
+    outline: none;
 }
 
+.next:hover 
+{
+    color: black;
+}
 
+.prev:hover
+{
+    color: black;
+}
+
+.slide-out{
+    animation: slide 1s forwards; 
+}
+
+@keyframes slide{
+    0%  {left:100%;}
+    50%  {left:50%;}
+    100% {left:0%;}
+}
 
