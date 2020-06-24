@@ -6,6 +6,11 @@ var slideIndex = 0;
 console.log(slideShow.length);
 
 slideShow.forEach((text,index)=>{
+    text.addEventListener("animationend",()=>{
+        text.classList.remove("slide-out");
+        text.classList.remove("show");
+    });
+    
     if(index == slideIndex)
     {
         text.classList.add("show");
@@ -13,13 +18,14 @@ slideShow.forEach((text,index)=>{
 });
 
 nextButton.addEventListener("click",() => {
-    slideShow[slideIndex].classList.remove("show");
-    slideIndex++;
-    if(slideShow.length == slideIndex)
-    {
-        slideIndex = 0;
-    }
-    slideShow[slideIndex].classList.add("show");        
+    slideShow[slideIndex].classList.add("slide-out");
+    // slideShow[slideIndex].classList.remove("show");
+    // slideIndex++;
+    // if(slideShow.length == slideIndex)
+    // {
+    //     slideIndex = 0;
+    // }
+    // slideShow[slideIndex].classList.add("show");        
 });
 
 prevButton.addEventListener("click",() => {
