@@ -79,6 +79,13 @@ nav > *
     color: black;
 }
 
+.slide-out-right{
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: slide-in 0.5s reverse;
+    animation: slide-in 0.5s reverse;
+}
+
 .slide-out{
     position: relative;
     overflow: hidden;
@@ -94,6 +101,13 @@ nav > *
 @keyframes slide{
     0% {left: 0px;}
     100% {left:-100%;}
+}
+
+.slide-in-left{
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: slide 0.5s reverse;
+    animation: slide 0.5s reverse;
 }
 
 .slide-in{
