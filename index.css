@@ -4,11 +4,11 @@
 
 .slideshow-container{
     background-image: url("img/showcase.jpg");
-    min-height: 800px;
+    min-height: 1500px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 nav{
@@ -127,3 +127,10 @@ nav > *
     100% {left:0%;}
 }
 
+.projects
+{
+    width: 80%;
+    min-height: 500px;
+    margin: 100px auto auto auto;
+    background-color: white;
+}
