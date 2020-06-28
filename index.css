@@ -82,8 +82,8 @@ nav > *
 .slide-out{
     position: relative;
     overflow: hidden;
-    -webkit-animation: slide 1s forwards;
-    animation: slide 1s forwards;
+    -webkit-animation: slide 0.5s forwards;
+    animation: slide 0.5s forwards;
 }
 
 @-webkit-keyframes slide{
@@ -95,3 +95,21 @@ nav > *
     0% {left: 0px;}
     100% {left:-100%;}
 }
+
+.slide-in{
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: slide-in 0.5s forwards;
+    animation: slide-in 0.5s forwards;
+}
+
+@-webkit-keyframes slide-in{
+    0% {left:100%;}
+    100% {left:0%;}
+}
+
+@keyframes slide-in{
+    0% {left:100%;}
+    100% {left:0%;}
+}
+
