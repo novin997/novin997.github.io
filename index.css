@@ -4,7 +4,7 @@
 
 .slideshow-container{
     background-image: url("img/showcase.jpg");
-    min-height: 1500px;
+    min-height: 1200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -130,7 +130,51 @@ nav > *
 .projects
 {
     width: 80%;
-    min-height: 500px;
     margin: 100px auto auto auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+}
+
+.project{
+    width:33.3%;
+    border: 2px solid black;
+    margin:auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-top: 20px;
+}
+
+.project p
+{
+    text-align: justify;
+    width:80%;
+    margin:auto;
+}
+
+img{
+    max-width: 50%;
+}
+
+footer{
+    background-color: black;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer i{
+    color:white;
+    margin:20px;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .projects{
+        flex-direction: column;
+    }
+
+    .project{
+        width:100%;
+    }
 }
