@@ -8,6 +8,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 10px;
     /* background-attachment: fixed; */
 }
 
@@ -27,6 +28,10 @@ nav > *
     margin:30px;
     color: black;
     text-decoration: none;
+}
+
+.navbarResponsive{
+    display: none;
 }
 
 .slideshow-flex
@@ -176,5 +181,34 @@ footer i{
 
     .project{
         width:100%;
+    }
+
+    .slideshow-text{
+        width:60%;
+        font-size: 1rem;
+    }
+    .prev,.next{
+        width:20%;
+    }
+
+    .navbar{
+        display:none;
+    }
+
+    .navbarResponsive{
+        /* display: block; */
+        background-color: black;
+        height:50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .fa-bars
+    {
+        color:white;
+        display:flex;
+        justify-content: flex-end;
+        margin:20px;     
     }
 }
