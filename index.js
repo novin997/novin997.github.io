@@ -54,5 +54,17 @@ menuIcon.addEventListener("click",()=>{
     // navBar.childNodes.forEach((navItem)=>{
     //     console.log(navItem.classList);
     // });
-    console.log(navItems)
+    navItems.forEach((item)=>
+    {
+        console.log(item);
+        if(item.classList.contains("show")){
+            item.classList.remove("show");
+            item.classList.add("notShow");
+        }    
+        else{
+            item.classList.remove("notShow");
+            item.classList.add("show");
+        }
+            
+    });
 });
