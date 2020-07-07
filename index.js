@@ -4,6 +4,10 @@ const slideShow = document.querySelectorAll(".slideshow-text");
 const navItems = document.querySelectorAll(".dropdownContents a");
 const menuIcon = document.querySelector(".fa-bars");
 
+const github = document.querySelector(".fa-github");
+const google = document.querySelector(".fa-google");
+const linkedin = document.querySelector(".fa-linkedin");
+
 var slideIndex = 0;
 
 slideShow[slideIndex].classList.add("show");
