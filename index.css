@@ -173,6 +173,10 @@ footer i{
     margin:20px;
 }
 
+.dropdownContents a{
+    display:none;
+}
+
 @media only screen and (max-width: 800px)
 {
     .projects{
@@ -203,12 +207,22 @@ footer i{
         justify-content: flex-end;
         align-items: center;
     }
-    
+  
     .fa-bars
     {
         color:white;
         display:flex;
         justify-content: flex-end;
-        margin:20px;     
+        margin:20px;
+        font-size: 30px;     
+    }
+
+    .dropdownContents a{
+        display:block;
+        background-color:white;
+        padding:5px;
+        text-decoration: none;
+        color:inherit;
+        text-align: end;
     }
 }

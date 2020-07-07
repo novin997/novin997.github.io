@@ -1,6 +1,9 @@
 const nextButton = document.querySelector(".next");
 const prevButton = document.querySelector(".prev");
 const slideShow = document.querySelectorAll(".slideshow-text");
+const navItems = document.querySelectorAll(".dropdownContents a");
+const menuIcon = document.querySelector(".fa-bars");
+
 var slideIndex = 0;
 
 slideShow[slideIndex].classList.add("show");
@@ -45,4 +48,11 @@ prevButton.addEventListener("click",() => {
     slideIndex--;
     if(slideIndex == -1)
         slideIndex = slideShow.length-1;
+});
+
+menuIcon.addEventListener("click",()=>{
+    // navBar.childNodes.forEach((navItem)=>{
+    //     console.log(navItem.classList);
+    // });
+    console.log(navItems)
 });
