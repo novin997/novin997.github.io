@@ -9,6 +9,7 @@ const google = document.querySelector(".fa-google");
 const linkedin = document.querySelector(".fa-linkedin");
 
 var slideIndex = 0;
+var isAnimationOn = false;
 
 slideShow[slideIndex].classList.add("show");
 
@@ -24,6 +25,7 @@ slideShow.forEach((text,index)=>{
         else if(text.classList.contains("slide-in"))
         {
             text.classList.remove("slide-in");
+            isAnimationOn = false;
         }
         else if(text.classList.contains("slide-out-right"))
         {
@@ -35,23 +37,31 @@ slideShow.forEach((text,index)=>{
         else if(text.classList.contains("slide-in-left"))
         {
             text.classList.remove("slide-in-left");
+            isAnimationOn = false;
         }    
     });
 });
 
 nextButton.addEventListener("click",() => {
-    
-    slideShow[slideIndex].classList.add("slide-out");
-    slideIndex++;
-    if(slideIndex == slideShow.length)
-        slideIndex = 0;     
+    if(!isAnimationOn)
+    {
+        slideShow[slideIndex].classList.add("slide-out");
+        slideIndex++;
+        if(slideIndex == slideShow.length)
+            slideIndex = 0;
+        isAnimationOn = true;  
+    } 
 });
 
 prevButton.addEventListener("click",() => {
-    slideShow[slideIndex].classList.add("slide-out-right");
-    slideIndex--;
-    if(slideIndex == -1)
-        slideIndex = slideShow.length-1;
+    if(!isAnimationOn)
+    {
+        slideShow[slideIndex].classList.add("slide-out-right");
+        slideIndex--;
+        if(slideIndex == -1)
+            slideIndex = slideShow.length-1;
+        isAnimationOn = true;   
+    }
 });
 
 menuIcon.addEventListener("click",()=>{
@@ -68,7 +78,6 @@ menuIcon.addEventListener("click",()=>{
         else{
             item.classList.remove("notShow");
             item.classList.add("show");
-        }
-            
+        }          
     });
 });
