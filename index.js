@@ -85,18 +85,21 @@ menuIcon.addEventListener("click",()=>{
 });
 
 requestTranscript.addEventListener("click",()=>{
-    fetch("/download",
-    {
-        method: "get"
-    })
-    .then(response => {
-        response.blob()
-    })
-    .then(blob =>{
-        console.log(blob);
-    })
-    .catch((error)=>
-    {
-        console.log(error);
-    })
+    window.location.href = "/download";
+    
+    // fetch("/download",
+    // {
+    //     method: "get"
+    // })
+    // .then(response => {
+    //     response.blob()
+    // })
+    // .then(blob =>{
+    //     var blobURL = URL.createObjectURL(blob);
+    //     window.location.replace(blobURL);
+    // })
+    // .catch((error)=>
+    // {
+    //     console.log(error);
+    // })
 });
