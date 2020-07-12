@@ -42,6 +42,7 @@ nav > *
 .slideshow-text
 {
     width: 80%;
+    height: 450px;
     font-family: 'Kadwa', serif;
     font-size: 2rem;
     margin: 30px auto auto auto;
@@ -142,6 +143,7 @@ nav > *
 
 .project{
     width:33.3%;
+    height:400px;
     border: 2px solid black;
     margin:auto;
     text-align: center;
@@ -151,13 +153,14 @@ nav > *
 
 .project p
 {
-    text-align: justify;
+    text-align: start;
     width:80%;
     margin:10px auto 10px auto;
 }
 
 img{
-    max-width: 50%;
+    max-width: 75%;
+    height:180px;
 }
 
 footer{
@@ -176,6 +179,12 @@ footer a{
 
 .notShow{
     display:none;
+}
+
+.slideshow-text ul
+{
+    list-style: square;
+    font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 800px)
