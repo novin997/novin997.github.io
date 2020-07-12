@@ -8,6 +8,8 @@ const github = document.querySelector(".fa-github");
 const google = document.querySelector(".fa-google");
 const linkedin = document.querySelector(".fa-linkedin");
 
+const requestTranscript = document.querySelector("#requestTranscript");
+
 var slideIndex = 0;
 var isAnimationOn = false;
 
@@ -80,4 +82,21 @@ menuIcon.addEventListener("click",()=>{
             item.classList.add("show");
         }          
     });
+});
+
+requestTranscript.addEventListener("click",()=>{
+    fetch("/download",
+    {
+        method: "get"
+    })
+    .then(response => {
+        response.blob()
+    })
+    .then(blob =>{
+        console.log(blob);
+    })
+    .catch((error)=>
+    {
+        console.log(error);
+    })
 });
