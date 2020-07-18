@@ -84,9 +84,9 @@ menuIcon.addEventListener("click",()=>{
     });
 });
 
-requestTranscript.addEventListener("click",()=>{
+requestTranscript.addEventListener("click",(e)=>{
+    e.preventDefault();
     window.location.href = "/download";
-    
     // fetch("/download",
     // {
     //     method: "get"
