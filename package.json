@@ -5,7 +5,7 @@
   "main": "games/server/server.js",
   "scripts": {
     "start": "node games/server/server.js",
-    "dev": "nodemon server.js",
+    "dev": "nodemon games/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
